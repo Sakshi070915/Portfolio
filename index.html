@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sakshi Pokhriyal - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Sakshi Pokhriyal</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <span class="greeting">Hello, World! 👋</span>
+                <h1>I'm Sakshi Pokhriyal</h1>
+                <h2>UI/UX Designer & Developer</h2>
+                <p>Crafting beautiful digital experiences through innovative design and clean code.</p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="cta-button primary">Get in Touch</a>
+                    <a href="#projects" class="cta-button secondary">View My Work</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="profile-circle">
+                    <img src="assets/1.jpeg" alt="Sakshi Pokhriyal">
+                </div>
+                <div class="floating-badge design-badge">UI/UX Designer</div>
+                <div class="floating-badge dev-badge">Developer</div>
+                <div class="floating-badge tech-badge">BTech CSE</div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse"></div>
+            <span>Scroll Down</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="section-background">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <div class="skills-container">
+                    <div class="skill-badge">UI Design</div>
+                    <div class="skill-badge">UX Research</div>
+                    <div class="skill-badge">Prototyping</div>
+                    <div class="skill-badge">Web Development</div>
+                    <div class="skill-badge">Figma</div>
+                    <div class="skill-badge">Adobe XD</div>
+                    <div class="skill-badge">HTML/CSS</div>
+                    <div class="skill-badge">JavaScript</div>
+                </div>
+                <p>I am a first-year BTech CSE student with a passion for creating meaningful digital experiences. My approach combines aesthetic design with user-centered functionality.</p>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-number">10+</span>
+                        <span class="stat-label">Projects Completed</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">5+</span>
+                        <span class="stat-label">Happy Clients</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">3+</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">15+</span>
+                        <span class="stat-label">Design Tools</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="assets/projects/project1.jpg" alt="Project 1">
+                    <div class="project-overlay">
+                        <a href="#" class="view-project">View Project</a>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <div class="project-tags">
+                        <span>UI Design</span>
+                        <span>Mobile App</span>
+                    </div>
+                    <h3>Finance App Redesign</h3>
+                    <p>A modern mobile banking application with focus on user experience and accessibility.</p>
+                </div>
+            </div>
+            <!-- Add more project cards with similar structure -->
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <h2 class="section-title">Contact Me</h2>
+        <div class="contact-container">
+            <form id="contact-form" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="social-links">
+            <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-behance"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-dribbble"></i></a>
+        </div>
+        <p>&copy; 2024 Sakshi Pokhriyal. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Form submission handling
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                message: document.getElementById('message').value
+            };
+            alert('Thank you for your message! I will get back to you soon.');
+            this.reset();
+        });
+
+        // Add active class to nav links on scroll
+        window.addEventListener('scroll', function() {
+            let sections = document.querySelectorAll('section');
+            let navLinks = document.querySelectorAll('nav ul li a');
+            
+            sections.forEach(section => {
+                let top = window.scrollY;
+                let offset = section.offsetTop - 150;
+                let height = section.offsetHeight;
+                let id = section.getAttribute('id');
+                
+                if(top >= offset && top < offset + height) {
+                    navLinks.forEach(link => {
+                        link.classList.remove('active');
+                        document.querySelector('nav ul li a[href*=' + id + ']').classList.add('active');
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
